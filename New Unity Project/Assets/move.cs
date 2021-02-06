@@ -35,6 +35,22 @@ public class move : MonoBehaviour
                 position--;
             }
 
+            
+
+        }
+        if (transform.position==objects[0].transform.position)
+        {
+            //ifbutten.changeColor(true);
+        }
+        else
+        {
+            ifbutten.changeColor(false);
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        ifbutten.changeColor(true);
+        Debug.Log("enter");
+    }
 }
+
